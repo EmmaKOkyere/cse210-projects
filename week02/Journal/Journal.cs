@@ -36,6 +36,8 @@ public class Journal
 
     public void DisplayEntries()
     {
+        Console.WriteLine($"Total entries: {entries.Count}"); // Debugging line
+
         if (entries.Count == 0)
         {
             Console.WriteLine("No entries found.");
@@ -47,6 +49,9 @@ public class Journal
         {
             Console.WriteLine(entry);
         }
+
+        Console.WriteLine("Press any key to return to the menu..."); // Pause before returning
+        Console.ReadKey();
     }
 
     public void SaveToFile()
